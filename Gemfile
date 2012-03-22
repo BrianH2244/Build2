@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
   gem 'rails', '3.2.2'
   gem 'bootstrap-sass', '2.0.0'
+  gem 'bcrypt-ruby', '3.0.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -25,6 +26,10 @@ group :test do
   gem 'libnotify', '0.5.9'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
+end
+
+group :development do
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 group :production do
