@@ -19,12 +19,19 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
-    else
-      render 'new'
+
+    respond_to do |format|
+      if @user.save
+        sign_in @user
+        # Tell the UserMailer to send a welcome Email after save
+        UserMailer.registration_confirmation(@user).deliver
+ 
+        format.html { redirect_to(@user, :notice => 'Welcome to Broaden and Build!') }
+        format.xml  { render :xml => @user, :status => :created, :location => @user }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
     end
   end
 
