@@ -7,6 +7,7 @@ source 'https://rubygems.org'
   gem 'will_paginate', '3.0.3'
   gem 'bootstrap-will_paginate', '0.0.5'
   gem 'mail', '2.4.4'
+  gem "devise", ">= 2.0.4"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -33,6 +34,7 @@ group :test do
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1'
   gem 'database_cleaner', '0.7.0'
+  gem 'email_spec'
 end
 
 group :development do

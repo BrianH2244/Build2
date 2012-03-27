@@ -1,21 +1,17 @@
 Build::Application.routes.draw do
 
-  get "password_resets/new"
-
-  resources :users do
-    member do
-      get :following, :followers
-    end
+  constraints(:host => "broadenandbuild.com") do
+    match "(*x)" => redirect { |params, request|
+      URI.parse(request.url).tap { |x| x.host = "www.broadenandbuild.com" }.to_s
+    }
   end
-  resources :sessions,      only: [:new, :create, :destroy]
-  resources :microposts,    only: [:create, :destroy]
-  resources :relationships, only: [:create, :destroy]
+
+  devise_for :users
+  resources :users, :only => [:index, :show]
 
   root to: 'static_pages#home'
 
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  get "password_resets/new"
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
