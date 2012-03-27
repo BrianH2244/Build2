@@ -49,7 +49,7 @@ Build::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  config.action_mailer.default_url_options = { :host => 'broadenandbuild.com' }
+  config.action_mailer.default_url_options = { :host => 'stark-flower-6106.herokuapp.com' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
