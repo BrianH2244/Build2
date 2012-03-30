@@ -7,7 +7,7 @@ Build::Application.routes.draw do
   end
 
   devise_for :users
-  resources :users, :only => [:index, :show]
+  resources :users
 
   root to: 'static_pages#home'
 
