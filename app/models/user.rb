@@ -9,8 +9,4 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   before_save :ensure_authentication_token
-
-  def to_param
-    name
-  end
 end
