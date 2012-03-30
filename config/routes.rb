@@ -6,7 +6,15 @@ Build::Application.routes.draw do
     }
   end
 
-  devise_for :users
+  devise_for :users, :skip => [:sessions], :controllers => { :registrations => :registrations }
+  as :user do
+    get 'register' => 'registrations#new', :as => :new_user_registration 
+    get 'login' => 'devise/sessions#new', :as => :new_user_session
+    post 'login' => 'devise/sessions#create', :as => :user_session
+    match 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session,
+      :via => Devise.mappings[:user].sign_out_via
+  end
+
   resources :users
 
   root to: 'static_pages#home'
