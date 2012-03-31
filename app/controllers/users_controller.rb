@@ -10,6 +10,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def create
+    # Create the user from params
+    @user = User.new(params[:user])
+    if @user.save
+      # Deliver the signup_email
+      Mail.registration_confirmation(@user).deliver
+      redirect_to(@user, :notice => "User created")
+    else
+      render :action => "new"
+    end
+  end
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User destroyed."
