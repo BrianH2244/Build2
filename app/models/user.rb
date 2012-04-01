@@ -9,4 +9,11 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   before_save :ensure_authentication_token
+
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
+
+  def should_generate_new_friendly_id?
+    new_record?
+  end
 end
