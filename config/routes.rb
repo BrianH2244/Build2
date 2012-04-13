@@ -16,10 +16,18 @@ Build::Application.routes.draw do
   end
 
   resources :users
+  resources :projects, :only => [:create, :destroy]
+  resources :weeks, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
   get "password_resets/new"
+
+  match '/projects', :to => 'projects#projects'
+  match '/weekly', :to => 'weeks#weekly'
+
+  match '/goal_setting', :to => 'static_pages#goals'
+  match '/savor_the_moment', :to => 'static_pages#savor'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'

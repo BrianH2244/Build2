@@ -1,0 +1,10 @@
+<tr>
+  <td class="question">
+    <span><%= mitfeed_item.mit %></span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", mitfeed_item, :method => :delete,
+                                         :confirm => "You sure?",
+                                         :title => mitfeed_item.mit %>
+  </td>
+</tr>

@@ -10,3 +10,29 @@
   </aside>
 
 <div class="clear"></div>
+
+<div class="left">
+  <% unless @user.projects.empty? %>
+    <h3><%= link_to 'Current Projects', projects_path %></h3>
+
+    <table>
+      <%= render @projects %>
+    </table>
+
+    <%= will_paginate @projects %>
+  <% end %>
+</div>
+
+<div class="left">
+  <% unless @user.weeks.empty? %>
+    <h3><%= link_to 'Weekly MITs', weekly_path %></h3></h3>
+
+    <table>
+      <%= render @weeks %>
+    </table>
+
+    <%= will_paginate @weeks %>
+  <% end %>
+</div>
+
+<div class="clear"></div>

@@ -1,0 +1,6 @@
+<% unless @mitfeed_items.empty? %>
+  <table class="today" summary="Today Questions">
+    <%= render :partial => 'shared/mitfeed_item', :collection => @mitfeed_items %>
+  </table>
+  <%= will_paginate @mitfeed_items %>
+<% end %>

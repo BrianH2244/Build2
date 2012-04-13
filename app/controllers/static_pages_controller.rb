@@ -11,4 +11,10 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def goals
+  end
+
+  def savor
+  end
 end

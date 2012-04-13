@@ -1,0 +1,13 @@
+<tr>
+  <td class="question">
+    <span><%= goalfeed_item.goal %></span>
+  </td>
+  <td>
+    <span><%= time_ago_in_words(goalfeed_item.created_at) %> ago.</span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", goalfeed_item, :method => :delete,
+                                         :confirm => "You sure?",
+                                         :title => goalfeed_item.goal %>
+  </td>
+</tr>

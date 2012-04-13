@@ -17,6 +17,11 @@ end
 
 module Build
   class Application < Rails::Application
+
+    if Rails.env == "production"
+      config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-5508042-7")
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -59,6 +64,7 @@ module Build
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    # If you are deploying Rails 3.1 on Heroku, you may want to set:
     config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
