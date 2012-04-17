@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   has_many :quotes
   has_many :savors
   has_many :habits
+  has_many :improvements
+  has_many :needs
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -46,5 +48,15 @@ class User < ActiveRecord::Base
   def habitualfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Habit.where("user_id = ?", id)
+  end
+
+  def improvingfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Improvement.where("user_id = ?", id)
+  end
+
+  def needingfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Need.where("user_id = ?", id)
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 201204162312623) do
+ActiveRecord::Schema.define(:version => 201204171120245) do
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
@@ -32,6 +32,24 @@ ActiveRecord::Schema.define(:version => 201204162312623) do
   end
 
   add_index "habits", ["user_id", "created_at"], :name => "index_habits_on_user_id_and_created_at"
+
+  create_table "improvements", :force => true do |t|
+    t.string   "improving"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "improvements", ["user_id", "created_at"], :name => "index_improvements_on_user_id_and_created_at"
+
+  create_table "needs", :force => true do |t|
+    t.string   "needing"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "needs", ["user_id", "created_at"], :name => "index_needs_on_user_id_and_created_at"
 
   create_table "projects", :force => true do |t|
     t.string   "goal"

@@ -5,7 +5,7 @@
 <table>
   <tr>
     <td>
-      <h3>Am I Savoring?</h3>
+      <h3>Am I Savoring the Moment?</h3>
       <p>What moments connected me to others today?</p>
       <%= render 'shared/savor_form' %>
       <p><%= render 'shared/savoringfeed' %></p>
@@ -14,10 +14,28 @@
 
   <tr>
     <td>
-      <h3>Am I Habitual?</h3>
+      <h3>Am I Creating Good Habits?</h3>
       <p>What choices increased my consistency today?</p>
       <%= render 'shared/habit_form' %>
       <p><%= render 'shared/habitualfeed' %></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h3>Am I Improving Valuable Skills?</h3>
+      <p>What useful improvements did I make today?</p>
+      <%= render 'shared/improvement_form' %>
+      <p><%= render 'shared/improvingfeed' %></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h3>Am I Prioritizing my Needs?</h3>
+      <p>What events needed prioritizing today?</p>
+      <%= render 'shared/need_form' %>
+      <p><%= render 'shared/needingfeed' %></p>
     </td>
   </tr>
 </table>

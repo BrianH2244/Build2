@@ -19,7 +19,7 @@
       <%= render @savors %>
     </table>
 
-     <%= will_paginate @savors %>
+     <p><%= will_paginate @savors %></p>
    <% end %>
 </div>
 
@@ -32,6 +32,30 @@
     </table>
 
      <%= will_paginate @habits %>
+   <% end %>
+</div>
+
+<div class="shine">
+  <% unless @user.improvements.empty? %>
+    <h3><%= link_to 'Improvement', reflect_path %></h3>
+
+    <table>
+      <%= render @improvements %>
+    </table>
+
+     <%= will_paginate @improvements %>
+   <% end %>
+</div>
+
+<div class="shine">
+  <% unless @user.needs.empty? %>
+    <h3><%= link_to 'Needs', reflect_path %></h3>
+
+    <table>
+      <%= render @needs %>
+    </table>
+
+     <%= will_paginate @needs %>
    <% end %>
 </div>
 
