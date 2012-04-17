@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 
   has_many :projects
   has_many :weeks
+  has_many :quotes
+  has_many :savors
+  has_many :habits
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -28,5 +31,20 @@ class User < ActiveRecord::Base
   def mitfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Week.where("user_id = ?", id)
+  end
+
+  def quotationfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Quote.where("user_id = ?", id)
+  end
+
+  def savoringfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Savor.where("user_id = ?", id)
+  end
+
+  def habitualfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Habit.where("user_id = ?", id)
   end
 end

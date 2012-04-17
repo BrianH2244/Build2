@@ -16,7 +16,7 @@ class WeeksController < ApplicationController
       redirect_to weekly_path
     else
       @mitfeed_items = []
-      render 'static_pages/weekly'
+      render 'weeks/weekly'
     end
   end
 

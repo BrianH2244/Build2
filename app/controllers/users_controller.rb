@@ -9,8 +9,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @savors = @user.savors.paginate(:page => params[:page])
+    @habits = @user.habits.paginate(:page => params[:page])
     @projects = @user.projects.paginate(:page => params[:page])
     @weeks = @user.weeks.paginate(:page => params[:page])
+    @quotes = @user.quotes.paginate(:page => params[:page])
     if request.path != user_path(@user)
       redirect_to @user, status: :moved_permanently
     end

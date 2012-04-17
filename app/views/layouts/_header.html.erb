@@ -1,5 +1,4 @@
-<header>
-<div class="navbar navbar-fixed-top">
+<header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
       <%= link_to "Broaden and Build", root_path, id: "logo" %>
@@ -32,20 +31,20 @@
       </nav>
     </div>
   </div>
-</div>
-          <% if signed_in? %>
-  <div class="subnav">
-  <div class="centered-tabs">
-    <ul class="nav nav-tabs">
-      <li class="active"><%#= link_to 'Goals', goal_setting_path %></li>
-      <li class="active"><%#= link_to 'Savor', savor_the_moment_path %></li>
-      <li class="active"><%= link_to 'Projects', projects_path %></li>
-      <li class="active"><%= link_to 'Weekly', weekly_path %></li>
-    </ul>
-  </div>
-</div>
-          <% end %>
 </header>
-
+<% if signed_in? %>
+  <div class="subnav">
+    <div class="centered-tabs">
+      <ul class="nav nav-tabs">
+        <li class="active"><%#= link_to 'Goals', goal_setting_path %></li>
+        <li class="active"><%#= link_to 'Savor', savor_the_moment_path %></li>
+        <li class="active"><%= link_to 'Reflect', reflect_path %></li>
+        <li class="active"><%= link_to 'Projects', projects_path %></li>
+        <li class="active"><%= link_to 'Weekly', weekly_path %></li>
+        <li class="active"><%= link_to 'Quotes', quotes_path %></li>
+      </ul>
+    </div>
+  </div>
+<% end %>
 <br />
 <br />

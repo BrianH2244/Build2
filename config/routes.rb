@@ -18,6 +18,9 @@ Build::Application.routes.draw do
   resources :users
   resources :projects, :only => [:create, :destroy]
   resources :weeks, :only => [:create, :destroy]
+  resources :quotes, :only => [:create, :destroy]
+  resources :savors, :only => [:create, :destroy]
+  resources :habits, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
@@ -25,6 +28,8 @@ Build::Application.routes.draw do
 
   match '/projects', :to => 'projects#projects'
   match '/weekly', :to => 'weeks#weekly'
+  match '/quotes', :to => 'quotes#quotes'
+  match '/reflect', :to => 'static_pages#reflect'
 
   match '/goal_setting', :to => 'static_pages#goals'
   match '/savor_the_moment', :to => 'static_pages#savor'

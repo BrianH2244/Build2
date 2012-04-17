@@ -17,4 +17,13 @@ class StaticPagesController < ApplicationController
 
   def savor
   end
+
+  def reflect
+    if signed_in?
+      @savor = Savor.new
+      @savoringfeed_items = current_user.savoringfeed.paginate(:page => params[:page])
+      @habit = Habit.new
+      @habitualfeed_items = current_user.habitualfeed.paginate(:page => params[:page])
+    end
+  end
 end

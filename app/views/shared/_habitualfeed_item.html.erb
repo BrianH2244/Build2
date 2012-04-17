@@ -1,0 +1,13 @@
+<tr>
+  <td class="statement">
+    <span><%= habitualfeed_item.habitual %></span>
+  </td>
+  <td class="days">
+    <span><%= time_ago_in_words(habitualfeed_item.created_at) %> ago.</span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", habitualfeed_item, :method => :delete,
+                                          :confirm => "You sure?",
+                                          :title => habitualfeed_item.habitual %>
+  </td>
+</tr>

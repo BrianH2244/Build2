@@ -61,11 +61,12 @@ textarea {
   float: right;
 }
 
+.space {
+  margin-bottom: 25px;
+}
+
 /* typography */
 
-a {
-  color: #000050;
-}
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -143,6 +144,35 @@ footer {
   }
 }
 
+/* profile */
+
+.shine {
+  width: 20%;
+  float: left;
+}
+
+/*Formatting for dynamic pages */
+
+table.feed {
+  text-align:left;
+  width: 580px;
+}
+
+td.statement {
+  text-align:left;
+  width: 65%;
+}
+
+td.days {
+  text-align:left;
+  width: 30%;
+}
+
+td.erase {
+  text-align:right;
+  width: 5%;
+}
+
 /* miscellaneous */
 
 .debug_dump {
@@ -154,7 +184,7 @@ footer {
 }
 
 .btn {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .clear {clear:both;}
@@ -282,28 +312,6 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
-}
-
-/*Weekly page */
-
-table.today {
-  text-align:left;
-  width: 580px;
-}
-
-td.question {
-  text-align:left;
-  width: 65%;
-}
-
-td.days {
-  text-align:left;
-  width: 30%;
-}
-
-td.erase {
-  text-align:right;
-  width: 5%;
 }
 
 /* Jumbotrons

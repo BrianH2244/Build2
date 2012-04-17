@@ -11,6 +11,32 @@
 
 <div class="clear"></div>
 
+<div class="shine">
+  <% unless @user.savors.empty? %>
+    <h3><%= link_to 'Savored', reflect_path %></h3>
+
+    <table>
+      <%= render @savors %>
+    </table>
+
+     <%= will_paginate @savors %>
+   <% end %>
+</div>
+
+<div class="shine">
+  <% unless @user.habits.empty? %>
+    <h3><%= link_to 'Habits', reflect_path %></h3>
+
+    <table>
+      <%= render @habits %>
+    </table>
+
+     <%= will_paginate @habits %>
+   <% end %>
+</div>
+
+<div class="clear"></div>
+
 <div class="left">
   <% unless @user.projects.empty? %>
     <h3><%= link_to 'Current Projects', projects_path %></h3>
@@ -23,15 +49,31 @@
   <% end %>
 </div>
 
+<div class="clear"></div>
+
 <div class="left">
   <% unless @user.weeks.empty? %>
-    <h3><%= link_to 'Weekly MITs', weekly_path %></h3></h3>
+    <h3><%= link_to 'Weekly MITs', weekly_path %></h3>
 
     <table>
       <%= render @weeks %>
     </table>
 
     <%= will_paginate @weeks %>
+  <% end %>
+</div>
+
+<div class="clear"></div>
+
+<div class="left">
+  <% unless @user.quotes.empty? %>
+    <h3><%= link_to 'Inspiring Quotations', quotes_path %></h3>
+
+    <table>
+      <%= render @quotes %>
+    </table>
+
+    <%= will_paginate @quotes %>
   <% end %>
 </div>
 

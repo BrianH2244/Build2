@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
       redirect_to projects_path
     else
       @goalfeed_items = []
-      render 'static_pages/projects'
+      render 'projects/projects'
     end
   end
 

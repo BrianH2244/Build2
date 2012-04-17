@@ -1,5 +1,5 @@
 <% unless @goalfeed_items.empty? %>
-  <table class="today" summary="Today Questions">
+  <table class="feed" summary="Feed Statements">
     <%= render :partial => 'shared/goalfeed_item', :collection => @goalfeed_items %>
   </table>
   <%= will_paginate @goalfeed_items %>

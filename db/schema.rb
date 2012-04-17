@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120410090556) do
+ActiveRecord::Schema.define(:version => 201204162312623) do
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20120410090556) do
   add_index "friendly_id_slugs", ["sluggable_id"], :name => "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], :name => "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "habits", :force => true do |t|
+    t.string   "habitual"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "habits", ["user_id", "created_at"], :name => "index_habits_on_user_id_and_created_at"
+
   create_table "projects", :force => true do |t|
     t.string   "goal"
     t.integer  "user_id"
@@ -32,6 +41,24 @@ ActiveRecord::Schema.define(:version => 20120410090556) do
   end
 
   add_index "projects", ["user_id", "created_at"], :name => "index_projects_on_user_id_and_created_at"
+
+  create_table "quotes", :force => true do |t|
+    t.string   "quotation"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "quotes", ["user_id", "created_at"], :name => "index_quotes_on_user_id_and_created_at"
+
+  create_table "savors", :force => true do |t|
+    t.string   "savoring"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "savors", ["user_id", "created_at"], :name => "index_savors_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

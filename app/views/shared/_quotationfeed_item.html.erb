@@ -1,0 +1,10 @@
+<tr>
+  <td class="statement">
+    <span><%= quotationfeed_item.quotation %></span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", quotationfeed_item, :method => :delete,
+                                              :confirm => "You sure?",
+                                              :title => quotationfeed_item.quotation %>
+  </td>
+</tr>
