@@ -10,34 +10,20 @@ class User < ActiveRecord::Base
 
   before_save :ensure_authentication_token
 
-  has_many :projects
-  has_many :weeks
-  has_many :quotes
   has_many :savors
   has_many :habits
   has_many :improvements
   has_many :needs
+  has_many :expansions
+  has_many :projects
+  has_many :weeks
+  has_many :quotes
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
 
   def should_generate_new_friendly_id?
     new_record?
-  end
-
-  def goalfeed
-    # This is preliminary. See Chapter 12 for the full implementation.
-    Project.where("user_id = ?", id)
-  end
-
-  def mitfeed
-    # This is preliminary. See Chapter 12 for the full implementation.
-    Week.where("user_id = ?", id)
-  end
-
-  def quotationfeed
-    # This is preliminary. See Chapter 12 for the full implementation.
-    Quote.where("user_id = ?", id)
   end
 
   def savoringfeed
@@ -58,5 +44,25 @@ class User < ActiveRecord::Base
   def needingfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Need.where("user_id = ?", id)
+  end
+
+  def expandingfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Expansion.where("user_id = ?", id)
+  end
+
+  def goalfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Project.where("user_id = ?", id)
+  end
+
+  def mitfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Week.where("user_id = ?", id)
+  end
+
+  def quotationfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Quote.where("user_id = ?", id)
   end
 end

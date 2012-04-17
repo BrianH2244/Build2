@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 201204171120245) do
+ActiveRecord::Schema.define(:version => 2012041712524413) do
+
+  create_table "expansions", :force => true do |t|
+    t.string   "expanding"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "expansions", ["user_id", "created_at"], :name => "index_expansions_on_user_id_and_created_at"
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false

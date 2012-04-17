@@ -1,19 +1,42 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span3">
     <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
+      <h1><%= @user.name %></h1>
+      <%= gravatar_for @user %>
     </section>
   </aside>
 
+<div class="projects">
+  <% unless @user.projects.empty? %>
+    <h3><%= link_to 'Current Projects', projects_path %></h3>
+
+    <table>
+      <%= render @projects %>
+    </table>
+
+    <%= will_paginate @projects %>
+  <% end %>
+</div>
+
+<div class="mits">
+  <% unless @user.weeks.empty? %>
+    <h3><%= link_to 'Weekly MITs', weekly_path %></h3>
+
+    <table>
+      <%= render @weeks %>
+    </table>
+
+    <%= will_paginate @weeks %>
+  <% end %>
+</div>
+
 <div class="clear"></div>
+<br />
 
 <div class="shine">
   <% unless @user.savors.empty? %>
-    <h3><%= link_to 'Savored', reflect_path %></h3>
+    <h3><%= link_to 'Savoring', reflect_path %></h3>
 
     <table>
       <%= render @savors %>
@@ -37,7 +60,7 @@
 
 <div class="shine">
   <% unless @user.improvements.empty? %>
-    <h3><%= link_to 'Improvement', reflect_path %></h3>
+    <h3><%= link_to 'Improving', reflect_path %></h3>
 
     <table>
       <%= render @improvements %>
@@ -49,7 +72,7 @@
 
 <div class="shine">
   <% unless @user.needs.empty? %>
-    <h3><%= link_to 'Needs', reflect_path %></h3>
+    <h3><%= link_to 'Needing', reflect_path %></h3>
 
     <table>
       <%= render @needs %>
@@ -59,35 +82,20 @@
    <% end %>
 </div>
 
-<div class="clear"></div>
-
-<div class="left">
-  <% unless @user.projects.empty? %>
-    <h3><%= link_to 'Current Projects', projects_path %></h3>
+<div class="shine">
+  <% unless @user.expansions.empty? %>
+    <h3><%= link_to 'Expanding', reflect_path %></h3>
 
     <table>
-      <%= render @projects %>
+      <%= render @expansions %>
     </table>
 
-    <%= will_paginate @projects %>
-  <% end %>
+     <%= will_paginate @expansions %>
+   <% end %>
 </div>
 
 <div class="clear"></div>
-
-<div class="left">
-  <% unless @user.weeks.empty? %>
-    <h3><%= link_to 'Weekly MITs', weekly_path %></h3>
-
-    <table>
-      <%= render @weeks %>
-    </table>
-
-    <%= will_paginate @weeks %>
-  <% end %>
-</div>
-
-<div class="clear"></div>
+<br />
 
 <div class="left">
   <% unless @user.quotes.empty? %>

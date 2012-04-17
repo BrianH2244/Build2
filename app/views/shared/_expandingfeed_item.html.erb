@@ -1,0 +1,13 @@
+<tr>
+  <td class="statement">
+    <span><%= expandingfeed_item.expanding %></span>
+  </td>
+  <td class="days">
+    <span><%= time_ago_in_words(expandingfeed_item.created_at) %> ago.</span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", expandingfeed_item, :method => :delete,
+                                              :confirm => "You sure?",
+                                              :title => expandingfeed_item.expanding %>
+  </td>
+</tr>

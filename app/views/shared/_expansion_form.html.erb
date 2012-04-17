@@ -1,0 +1,7 @@
+<%= form_for (@expansion) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :expanding, placeholder: "Compose expansive moment..." %>
+  </div>
+  <%= f.submit "Create Expansion", class: "btn btn-large btn-primary" %>
+<% end %>

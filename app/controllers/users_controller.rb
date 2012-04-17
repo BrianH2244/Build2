@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @habits = @user.habits.paginate(:page => params[:page])
     @improvements = @user.improvements.paginate(:page => params[:page])
     @needs = @user.needs.paginate(:page => params[:page])
+    @expansions = @user.expansions.paginate(:page => params[:page])
     @projects = @user.projects.paginate(:page => params[:page])
     @weeks = @user.weeks.paginate(:page => params[:page])
     @quotes = @user.quotes.paginate(:page => params[:page])

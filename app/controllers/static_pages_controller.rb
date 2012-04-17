@@ -28,6 +28,8 @@ class StaticPagesController < ApplicationController
       @improvingfeed_items = current_user.improvingfeed.paginate(:page => params[:page])
       @need = Need.new
       @needingfeed_items = current_user.needingfeed.paginate(:page => params[:page])
+      @expansion = Expansion.new
+      @expandingfeed_items = current_user.expandingfeed.paginate(:page => params[:page])
     end
   end
 end

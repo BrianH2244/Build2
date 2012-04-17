@@ -23,6 +23,7 @@ Build::Application.routes.draw do
   resources :habits, :only => [:create, :destroy]
   resources :improvements, :only => [:create, :destroy]
   resources :needs, :only => [:create, :destroy]
+  resources :expansions, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
