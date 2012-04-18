@@ -1,8 +1,8 @@
 Build::Application.routes.draw do
 
-  constraints(:host => "broadenandbuild.com") do
+  constraints(:host => "https://broadenandbuild.com") do
     match "(*x)" => redirect { |params, request|
-      URI.parse(request.url).tap { |x| x.host = "www.broadenandbuild.com" }.to_s
+      URI.parse(request.url).tap { |x| x.host = "https://www.broadenandbuild.com" }.to_s
     }
   end
 
