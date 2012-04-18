@@ -1,10 +1,10 @@
 Build::Application.routes.draw do
 
-  constraints(:host => "https://broadenandbuild.com") do
-    match "(*x)" => redirect { |params, request|
-      URI.parse(request.url).tap { |x| x.host = "https://www.broadenandbuild.com" }.to_s
-    }
-  end
+#  constraints(:host => "broadenandbuild.com") do
+#    match "(*x)" => redirect { |params, request|
+#      URI.parse(request.url).tap { |x| x.host = "www.broadenandbuild.com" }.to_s
+#    }
+#  end
 
   devise_for :users, :skip => [:sessions], :controllers => { :registrations => :registrations }
   as :user do
