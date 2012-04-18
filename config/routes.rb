@@ -1,5 +1,11 @@
 Build::Application.routes.draw do
 
+  constraints(:host => "broadenandbuild.com") do
+    match "(*x)" => redirect { |params, request|
+      URI.parse(request.url).tap { |x| x.host = "www.broadenandbuild.com" }.to_s
+    }
+  end
+
   devise_for :users, :skip => [:sessions], :controllers => { :registrations => :registrations }
   as :user do
     get 'register' => 'registrations#new', :as => :new_user_registration 
