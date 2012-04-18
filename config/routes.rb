@@ -1,13 +1,10 @@
 Build::Application.routes.draw do
 
-  match "*path" => redirect("https://www.broadenandbuild.com/%{path}"), :constraints => { :protocol => "http://" }
-  match "*path" => redirect("https://www.broadenandbuild.com/%{path}"), :constraints => { :subdomain => "" }
-
-#  constraints(:host => "broadenandbuild.com") do
-#    match "(*x)" => redirect { |params, request|
-#      URI.parse(request.url).tap { |x| x.host = "www.broadenandbuild.com" }.to_s
-#    }
-#  end
+  constraints(:host => "broadenandbuild.com") do
+    match "(*x)" => redirect { |params, request|
+      URI.parse(request.url).tap { |x| x.host = "www.broadenandbuild.com" }.to_s
+    }
+  end
 
   devise_for :users, :skip => [:sessions], :controllers => { :registrations => :registrations }
   as :user do
