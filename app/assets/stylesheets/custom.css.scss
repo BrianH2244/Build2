@@ -46,7 +46,7 @@ textarea {
 
 .homemarginleft {
   text-align: left;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .marginleft {
@@ -173,17 +173,18 @@ table.feed {
 
 td.statement {
   text-align:left;
-  width: 65%;
+  width: 71%;
 }
 
 td.days {
-  text-align:left;
-  width: 30%;
+  text-align:right;
+  margin-left: 4%;
+  width: 18%;
 }
 
 td.erase {
   text-align:right;
-  width: 5%;
+  width: 7%;
 }
 
 /* miscellaneous */
