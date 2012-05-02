@@ -18,6 +18,9 @@ class StaticPagesController < ApplicationController
   def savor
   end
 
+  def habits
+  end
+
   def reflect
     if signed_in?
       @savor = Savor.new
