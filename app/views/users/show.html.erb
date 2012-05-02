@@ -34,6 +34,7 @@
 <div class="clear"></div>
 <br />
 
+<div class="box">
 <div class="shine">
   <% unless @user.savors.empty? %>
     <h3><%= link_to 'Savoring', reflect_path %></h3>
@@ -92,6 +93,7 @@
 
      <%= will_paginate @expansions %>
    <% end %>
+</div>
 </div>
 
 <div class="clear"></div>

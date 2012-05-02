@@ -10,14 +10,13 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
-.centered-btn { text-align:center; }
-.centered-btn ul.btn-group { display:inline-block; }
-.centered-btn button { display:inline; float:left; }
-
 .centered-tabs { text-align:center; }
 .centered-tabs ul.nav-tabs { display:inline-block; }
 .centered-tabs li { display:inline; }
 .centered-tabs a { float:left;   font-size: 1.1em;}
+
+.centered-sidebar { text-align:center; float:right; margin-right:150px;}
+.centered-sidebar a {font-size: 1.1em;}
 
 /* universal */
 
@@ -204,6 +203,11 @@ td.erase {
 .clear {clear:both;}
 
 /* sidebar */
+
+.sidebar {
+  float: right;
+  margin-right: 150px;
+}
 
 aside {
   section {
