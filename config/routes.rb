@@ -38,6 +38,8 @@ Build::Application.routes.draw do
   match '/savor_the_moment', :to => 'static_pages#savor'
   match '/habits_are_a_choice', :to => 'static_pages#habits'
   match '/self_improvement', :to => 'static_pages#improvement'
+  match '/essential_needs', :to => 'static_pages#needs'
+  match '/expanding_awareness', :to => 'static_pages#expand'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'

@@ -24,6 +24,12 @@ class StaticPagesController < ApplicationController
   def improvement
   end
 
+  def needs
+  end
+
+  def expand
+  end
+
   def reflect
     if signed_in?
       @savor = Savor.new
