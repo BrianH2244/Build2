@@ -34,13 +34,16 @@ Build::Application.routes.draw do
   match '/quotes', :to => 'quotes#quotes'
   match '/reflect', :to => 'static_pages#reflect'
 
-  match '/june05_challenge', :to => 'static_pages#june05_challenge'
-  match '/goal_setting', :to => 'static_pages#goals'
   match '/savor_the_moment', :to => 'static_pages#savor'
   match '/habits_are_a_choice', :to => 'static_pages#habits'
   match '/self_improvement', :to => 'static_pages#improvement'
   match '/essential_needs', :to => 'static_pages#needs'
   match '/expanding_awareness', :to => 'static_pages#expand'
+
+  match '/shine_from_within', :to => 'static_pages#shine'
+  match '/goal_setting', :to => 'static_pages#goals'
+  match '/june05_challenge', :to => 'static_pages#june05_challenge'
+  match '/donate', :to => 'static_pages#donate'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'

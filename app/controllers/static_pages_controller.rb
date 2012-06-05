@@ -12,10 +12,16 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def june05_challenge
+  def shine
   end
 
   def goals
+  end
+
+  def june05_challenge
+  end
+
+  def donate
   end
 
   def savor
