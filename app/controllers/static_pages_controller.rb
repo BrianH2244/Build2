@@ -12,6 +12,9 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def june05_challenge
+  end
+
   def goals
   end
 

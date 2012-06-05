@@ -34,6 +34,7 @@ Build::Application.routes.draw do
   match '/quotes', :to => 'quotes#quotes'
   match '/reflect', :to => 'static_pages#reflect'
 
+  match '/june05_challenge', :to => 'static_pages#june05_challenge'
   match '/goal_setting', :to => 'static_pages#goals'
   match '/savor_the_moment', :to => 'static_pages#savor'
   match '/habits_are_a_choice', :to => 'static_pages#habits'
