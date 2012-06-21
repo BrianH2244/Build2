@@ -42,7 +42,6 @@ Build::Application.routes.draw do
 
   match '/shine_from_within', :to => 'static_pages#shine'
   match '/goal_setting', :to => 'static_pages#goals'
-  match '/june05_challenge', :to => 'static_pages#june05_challenge'
   match '/donate', :to => 'static_pages#donate'
 
   match '/help',    to: 'static_pages#help'
