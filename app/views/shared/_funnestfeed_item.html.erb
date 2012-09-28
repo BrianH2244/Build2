@@ -1,0 +1,10 @@
+<tr>
+  <td class="statement">
+    <span><%= funnestfeed_item.funnest %></span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", funnestfeed_item, :method => :delete,
+                                            :confirm => "You sure?",
+                                            :title => funnestfeed_item.funnest %>
+  </td>
+</tr>

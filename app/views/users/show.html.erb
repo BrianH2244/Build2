@@ -112,3 +112,18 @@
 </div>
 
 <div class="clear"></div>
+<br />
+
+<div class="left">
+  <% unless @user.funs.empty? %>
+    <h3><%= link_to 'Fun Activities', funs_path %></h3>
+
+    <table>
+      <%= render @funs %>
+    </table>
+
+    <%= will_paginate @funs %>
+  <% end %>
+</div>
+
+<div class="clear"></div>

@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   has_many :projects
   has_many :weeks
   has_many :quotes
+  has_many :funs
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -64,5 +65,10 @@ class User < ActiveRecord::Base
   def quotationfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Quote.where("user_id = ?", id)
+  end
+
+  def funnestfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Fun.where("user_id = ?", id)
   end
 end

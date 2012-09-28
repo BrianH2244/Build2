@@ -1,0 +1,7 @@
+<%= form_for (@fun) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :funnest, placeholder: "Enter fun activity..." %>
+  </div>
+  <%= f.submit "Create Fun", class: "btn btn-large btn-primary" %>
+<% end %>

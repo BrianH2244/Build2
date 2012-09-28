@@ -23,6 +23,7 @@ Build::Application.routes.draw do
   resources :habits, :only => [:create, :destroy]
   resources :improvements, :only => [:create, :destroy]
   resources :needs, :only => [:create, :destroy]
+  resources :funs, :only => [:create, :destroy]
   resources :expansions, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
@@ -33,6 +34,7 @@ Build::Application.routes.draw do
   match '/weekly', :to => 'weeks#weekly'
   match '/quotes', :to => 'quotes#quotes'
   match '/reflect', :to => 'static_pages#reflect'
+  match '/funs', :to => 'funs#funs'
 
   match '/savor_the_moment', :to => 'static_pages#savor'
   match '/habits_are_a_choice', :to => 'static_pages#habits'

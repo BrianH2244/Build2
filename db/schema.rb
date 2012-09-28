@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
   add_index "friendly_id_slugs", ["sluggable_id"], :name => "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], :name => "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "funs", :force => true do |t|
+    t.string   "funnest"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "funs", ["user_id", "created_at"], :name => "index_funs_on_user_id_and_created_at"
+
   create_table "habits", :force => true do |t|
     t.string   "habitual"
     t.integer  "user_id"
