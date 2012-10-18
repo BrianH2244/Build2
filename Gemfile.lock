@@ -226,7 +226,7 @@ DEPENDENCIES
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)
   heroku (~> 2.24.1)
-  jquery-rails (= 2.0.0)
+  jquery-rails
   libnotify (~> 0.7.2)
   mail (= 2.4.4)
   pg (= 0.12.2)
