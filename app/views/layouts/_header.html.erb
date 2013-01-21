@@ -32,19 +32,19 @@
     </div>
   </div>
 </header>
-<% if signed_in? %>
   <div class="subnav">
     <div class="centered-tabs">
       <ul class="nav nav-tabs">
+      <% if signed_in? %>
         <li class="active"><%= link_to 'Reflect', reflect_path %></li>
         <li class="active"><%= link_to 'Projects', projects_path %></li>
         <li class="active"><%= link_to 'Weekly', weekly_path %></li>
         <li class="active"><%= link_to 'Quotes', quotes_path %></li>
         <li class="active"><%= link_to 'Fun', funs_path %></li>
+      <% end %>
       </ul>
     </div>
   </div>
-<% end %>
 
 <br />
 <br />

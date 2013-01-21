@@ -53,4 +53,7 @@ class StaticPagesController < ApplicationController
       @expandingfeed_items = current_user.expandingfeed.paginate(:page => params[:page])
     end
   end
+
+  def agent
+  end
 end

@@ -34,6 +34,7 @@ Build::Application.routes.draw do
   match '/weekly', :to => 'weeks#weekly'
   match '/quotes', :to => 'quotes#quotes'
   match '/reflect', :to => 'static_pages#reflect'
+  match '/agent', :to => 'static_pages#agent'
   match '/funs', :to => 'funs#funs'
 
   match '/savor_the_moment', :to => 'static_pages#savor'

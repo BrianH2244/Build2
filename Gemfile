@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 ruby "1.9.3"
 
-  gem 'rails', '3.2.3'
+  gem 'rails', '3.2.9'
   gem "heroku", "~> 2.24.1"
-  gem 'jquery-rails'
-  gem "bootstrap-sass", "~> 2.0.1"
+  gem 'jquery-rails', '2.0.2'
+  gem 'bootstrap-sass', '2.1'
   gem "bcrypt-ruby", "~> 3.0.1"
   gem 'faker', '1.0.1'
   gem 'will_paginate', '3.0.3'
-  gem 'bootstrap-will_paginate', '0.0.5'
+  gem 'bootstrap-will_paginate', '0.0.6'
   gem "devise", ">= 2.0.4"
   gem "cancan", "~> 1.6.7"
   gem "thin", "~> 1.3.1"
@@ -17,8 +17,8 @@ ruby "1.9.3"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
-  gem 'rspec-rails', '2.9.0'
-  gem 'guard-rspec', '0.5.5'
+  gem 'rspec-rails', '2.11.0'
+  gem 'guard-rspec', '1.2.1'
 end
 
 # Gems used only for assets and not required
@@ -35,9 +35,9 @@ group :test do
   gem "libnotify", "~> 0.7.2"
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
-  gem 'factory_girl_rails', '1.4.0'
-  gem "cucumber-rails", "~> 1.3.0"
-  gem "database_cleaner", "~> 0.7.2"
+  gem 'factory_girl_rails', '4.1.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
   gem "email_spec", "~> 1.2.1"
 end
 
