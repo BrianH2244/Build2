@@ -30,26 +30,26 @@ Build::Application.routes.draw do
 
   get "password_resets/new"
 
-  match '/projects', :to => 'projects#projects'
-  match '/weekly', :to => 'weeks#weekly'
-  match '/quotes', :to => 'quotes#quotes'
-  match '/reflect', :to => 'static_pages#reflect'
-  match '/agent', :to => 'static_pages#agent'
-  match '/funs', :to => 'funs#funs'
+  match '/projects', to: 'projects#projects', via: 'get'
+  match '/weekly', to: 'weeks#weekly', via: 'get'
+  match '/quotes', to: 'quotes#quotes', via: 'get'
+  match '/reflect', to: 'static_pages#reflect', via: 'get'
+  match '/agent', to: 'static_pages#agent', via: 'get'
+  match '/funs', to: 'funs#funs', via: 'get'
 
-  match '/savor_the_moment', :to => 'static_pages#savor'
-  match '/habits_are_a_choice', :to => 'static_pages#habits'
-  match '/self_improvement', :to => 'static_pages#improvement'
-  match '/essential_needs', :to => 'static_pages#needs'
-  match '/expanding_awareness', :to => 'static_pages#expand'
+  match '/savor_the_moment', to: 'static_pages#savor', via: 'get'
+  match '/habits_are_a_choice', to: 'static_pages#habits', via: 'get'
+  match '/self_improvement', to: 'static_pages#improvement', via: 'get'
+  match '/essential_needs', to: 'static_pages#needs', via: 'get'
+  match '/expanding_awareness', to: 'static_pages#expand', via: 'get'
 
-  match '/shine_from_within', :to => 'static_pages#shine'
-  match '/goal_setting', :to => 'static_pages#goals'
-  match '/donate', :to => 'static_pages#donate'
+  match '/shine_from_within', to: 'static_pages#shine', via: 'get'
+  match '/goal_setting', to: 'static_pages#goals', via: 'get'
+  match '/donate', to: 'static_pages#donate', via: 'get'
 
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
+  match '/help',    to: 'static_pages#help', via: 'get'
+  match '/about',   to: 'static_pages#about', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
