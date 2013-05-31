@@ -30,26 +30,25 @@ Build::Application.routes.draw do
 
   get "password_resets/new"
 
-  match '/projects', to: 'projects#projects', via: 'get'
-  match '/weekly', to: 'weeks#weekly', via: 'get'
-  match '/quotes', to: 'quotes#quotes', via: 'get'
-  match '/reflect', to: 'static_pages#reflect', via: 'get'
-  match '/agent', to: 'static_pages#agent', via: 'get'
-  match '/funs', to: 'funs#funs', via: 'get'
+  match '/projects' => 'projects#projects', :via => :get
+  match '/weekly' => 'weeks#weekly', :via => :get
+  match '/quotes' => 'quotes#quotes', :via => :get
+  match '/reflect' => 'static_pages#reflect', :via => :get
+  match '/agent' => 'static_pages#agent', :via => :get
+  match '/funs' => 'funs#funs', :via => :get
 
-  match '/savor_the_moment', to: 'static_pages#savor', via: 'get'
-  match '/habits_are_a_choice', to: 'static_pages#habits', via: 'get'
-  match '/self_improvement', to: 'static_pages#improvement', via: 'get'
-  match '/essential_needs', to: 'static_pages#needs', via: 'get'
-  match '/expanding_awareness', to: 'static_pages#expand', via: 'get'
+  match '/savor_the_moment' => 'static_pages#savor', :via => :get
+  match '/habits_are_a_choice' => 'static_pages#habits', :via => :get
+  match '/self_improvement' => 'static_pages#improvement', :via => :get
+  match '/essential_needs' => 'static_pages#needs', :via => :get
+  match '/expanding_awareness' => 'static_pages#expand', :via => :get
+  match '/shine_from_within' => 'static_pages#shine', :via => :get
+  match '/goal_setting' => 'static_pages#goals', :via => :get
+  match '/donate' => 'static_pages#donate', :via => :get
 
-  match '/shine_from_within', to: 'static_pages#shine', via: 'get'
-  match '/goal_setting', to: 'static_pages#goals', via: 'get'
-  match '/donate', to: 'static_pages#donate', via: 'get'
-
-  match '/help',    to: 'static_pages#help', via: 'get'
-  match '/about',   to: 'static_pages#about', via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/help' => 'static_pages#help', :via => :get
+  match '/about' => 'static_pages#about', :via => :get
+  match '/contact' => 'static_pages#contact', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
