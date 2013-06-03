@@ -2,6 +2,9 @@
   <td class="statement">
     <span><%= funnestfeed_item.funnest %></span>
   </td>
+  <td class="days">
+    <span><%= time_ago_in_words(funnestfeed_item.created_at) %> ago.</span>
+  </td>
   <td class="erase">
     <%= link_to "delete", funnestfeed_item, :method => :delete,
                                             :confirm => "You sure?",

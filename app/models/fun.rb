@@ -3,8 +3,8 @@ class Fun < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :funnest, presence: true, length: { maximum: 500 }
-  validates :user_id, presence: true
+  validates :funnest, :presence => true, :length => { :maximum => 100 }
+  validates :user_id, :presence => true
 
-  default_scope order: 'funs.created_at DESC'
+  default_scope :order => 'funs.created_at DESC'
 end
