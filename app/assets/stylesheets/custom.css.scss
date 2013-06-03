@@ -274,6 +274,10 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+input {
+  height: auto !important;
+}
+
 #error_explanation {
   color:#f00;
   ul {
