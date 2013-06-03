@@ -9,7 +9,6 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 
-gem "heroku", "~> 2.37.2"
 gem 'devise', "~> 2.2.4"
 gem "cancan", "~> 1.6.9"
 gem "thin", "~> 1.5.1"
