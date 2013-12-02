@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "improvements", ["user_id", "created_at"], :name => "index_improvements_on_user_id_and_created_at"
 
+  create_table "mostimportants", :force => true do |t|
+    t.string   "mostimportantly"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "mostimportants", ["user_id", "created_at"], :name => "index_mostimportants_on_user_id_and_created_at"
+
   create_table "needs", :force => true do |t|
     t.string   "needing"
     t.integer  "user_id"

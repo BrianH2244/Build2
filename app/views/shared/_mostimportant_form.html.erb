@@ -1,0 +1,7 @@
+<%= form_for (@mostimportant) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :mostimportantly, placeholder: "Compose new important task..." %>
+  </div>
+  <%= f.submit "Create Important Task", class: "btn btn-large btn-primary" %>
+<% end %>

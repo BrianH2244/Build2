@@ -1,0 +1,6 @@
+<% unless @mostimportantlyfeed_items.empty? %>
+  <table class="feed" summary="Feed Statements">
+    <%= render :partial => 'shared/mostimportantlyfeed_item', :collection => @mostimportantlyfeed_items %>
+  </table>
+  <%= will_paginate @mostimportantlyfeed_items %>
+<% end %>

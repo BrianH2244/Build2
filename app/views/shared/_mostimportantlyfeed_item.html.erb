@@ -1,0 +1,10 @@
+<tr>
+  <td class="statement">
+    <span><%= mostimportantlyfeed_item.mostimportantly %></span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", mostimportantlyfeed_item, :method => :delete,
+                                              :confirm => "You sure?",
+                                              :title => mostimportantlyfeed_item.mostimportantly %>
+  </td>
+</tr>

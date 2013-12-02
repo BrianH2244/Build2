@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @weeks = @user.weeks.paginate(:page => params[:page])
     @quotes = @user.quotes.paginate(:page => params[:page])
     @funs = @user.funs.paginate(:page => params[:page])
+    @mostimportants = @user.mostimportants.paginate(:page => params[:page])
     if request.path != user_path(@user)
       redirect_to @user, status: :moved_permanently
     end

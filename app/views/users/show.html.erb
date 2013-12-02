@@ -126,4 +126,20 @@
   <% end %>
 </div>
 
+<br />
+
+<div class="left">
+  <% unless @user.mostimportants.empty? %>
+    <h3><%= link_to 'Most Important Tasks', mostimportants_path %></h3>
+
+    <table>
+      <%= render @mostimportants %>
+    </table>
+
+    <%= will_paginate @mostimportants %>
+  <% end %>
+</div>
+
+<div class="clear"></div>
+
 <div class="clear"></div>
