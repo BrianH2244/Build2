@@ -1,5 +1,12 @@
 <% unless @mostimportantlyfeed_items.empty? %>
   <table class="feed" summary="Feed Statements">
+    <tr>
+      <td class="statement">
+      </td>
+      <td class="erase">
+        <h4>Most Important</h4>
+      </td>
+    </tr>
     <%= render :partial => 'shared/mostimportantlyfeed_item', :collection => @mostimportantlyfeed_items %>
   </table>
   <%= will_paginate @mostimportantlyfeed_items %>

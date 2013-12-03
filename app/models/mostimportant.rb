@@ -1,7 +1,4 @@
 class Mostimportant < ActiveRecord::Base
-  # attr_accessible :title, :body
-end
-
   attr_accessible :mostimportantly
 
   belongs_to :user
@@ -10,3 +7,4 @@ end
   validates :user_id, :presence => true
 
   default_scope :order => 'mostimportants.created_at DESC'
+end
