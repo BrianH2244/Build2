@@ -78,6 +78,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "needs", ["user_id", "created_at"], :name => "index_needs_on_user_id_and_created_at"
 
+  create_table "procrastinates", :force => true do |t|
+    t.string   "procrastination"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "procrastinates", ["user_id", "created_at"], :name => "index_procrastinates_on_user_id_and_created_at"
+
   create_table "projects", :force => true do |t|
     t.string   "goal"
     t.integer  "user_id"

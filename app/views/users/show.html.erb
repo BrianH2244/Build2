@@ -112,7 +112,6 @@
 </div>
 
 <div class="clear"></div>
-<br />
 
 <div class="left">
   <% unless @user.funs.empty? %>
@@ -126,17 +125,33 @@
   <% end %>
 </div>
 
+<div class="clear"></div>
 <br />
 
 <div class="left">
   <% unless @user.mostimportants.empty? %>
-    <h3><%= link_to 'Most Important Tasks', mostimportants_path %></h3>
+    <h3><%= link_to 'Most Important Tasks', mostimportanttasks_path %></h3>
 
     <table>
       <%= render @mostimportants %>
     </table>
 
     <%= will_paginate @mostimportants %>
+  <% end %>
+</div>
+
+<div class="clear"></div>
+<br />
+
+<div class="left">
+  <% unless @user.procrastinates.empty? %>
+    <h3><%= link_to 'Overcoming Procrastination', overcomingprocrastination_path %></h3>
+
+    <table>
+      <%= render @procrastinates %>
+    </table>
+
+    <%= will_paginate @procrastinates %>
   <% end %>
 </div>
 

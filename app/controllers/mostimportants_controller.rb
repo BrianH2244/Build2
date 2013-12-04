@@ -12,8 +12,8 @@ class MostimportantsController < ApplicationController
   def create
     @mostimportant = current_user.mostimportants.build(params[:mostimportant])
     if @mostimportant.save
-      flash[:success] = "Most important task created!"
-      redirect_to mostimportants_path
+      flash[:success] = "Important task created!"
+      redirect_to mostimportanttasks_path
     else
       @mostimportantlyfeed_items = []
       render 'mostimportants/mostimportants'
@@ -22,7 +22,7 @@ class MostimportantsController < ApplicationController
 
   def destroy
     @mostimportant.destroy
-    redirect_to mostimportants_path
+    redirect_to mostimportanttasks_path
   end
 
   private

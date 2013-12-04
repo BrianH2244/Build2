@@ -1,0 +1,7 @@
+<%= form_for (@procrastinate) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :procrastination, placeholder: "Compose new procrastination activity to overcome..." %>
+  </div>
+  <%= f.submit "Create Activity", class: "btn btn-large btn-primary" %>
+<% end %>

@@ -26,6 +26,7 @@ Build::Application.routes.draw do
   resources :funs, :only => [:create, :destroy]
   resources :expansions, :only => [:create, :destroy]
   resources :mostimportants, :only => [:create, :destroy]
+  resources :procrastinates, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
@@ -37,7 +38,8 @@ Build::Application.routes.draw do
   match '/reflect' => 'static_pages#reflect', :via => :get
   match '/agent' => 'static_pages#agent', :via => :get
   match '/funs' => 'funs#funs', :via => :get
-  match '/mostimportants' => 'mostimportants#mostimportants', :via => :get
+  match '/mostimportanttasks' => 'mostimportants#mostimportants', :via => :get
+  match '/overcomingprocrastination' => 'procrastinates#procrastinates', :via => :get
 
   match '/savor_the_moment' => 'static_pages#savor', :via => :get
   match '/habits_are_a_choice' => 'static_pages#habits', :via => :get

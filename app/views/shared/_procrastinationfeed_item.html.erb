@@ -1,0 +1,10 @@
+<tr>
+  <td class="statement">
+    <h9><%= procrastinationfeed_item.procrastination %></h9>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", procrastinationfeed_item, :method => :delete,
+                                              :confirm => "You sure?",
+                                              :title => procrastinationfeed_item.procrastination %>
+  </td>
+</tr>

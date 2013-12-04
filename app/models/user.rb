@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   has_many :quotes
   has_many :funs
   has_many :mostimportants
+  has_many :procrastinates
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -76,5 +77,10 @@ class User < ActiveRecord::Base
   def mostimportantlyfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Mostimportant.where("user_id = ?", id)
+  end
+
+  def procrastinationfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Procrastinate.where("user_id = ?", id)
   end
 end
