@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
   has_many :funs
   has_many :mostimportants
   has_many :procrastinates
+  has_many :procrastinate1s
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -82,5 +83,10 @@ class User < ActiveRecord::Base
   def procrastinationfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Procrastinate.where("user_id = ?", id)
+  end
+
+  def procrastination1feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Procrastinate1.where("user_id = ?", id)
   end
 end

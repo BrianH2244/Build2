@@ -39,6 +39,15 @@ class StaticPagesController < ApplicationController
   def expand
   end
 
+  def overcomingprocrastination
+    if signed_in?
+      @procrastinate = Procrastinate.new
+      @procrastinationfeed_items = current_user.procrastinationfeed.paginate(:page => params[:page])
+      @procrastinate1 = Procrastinate1.new
+      @procrastination1feed_items = current_user.procrastination1feed.paginate(:page => params[:page])
+    end
+  end
+
   def reflect
     if signed_in?
       @savor = Savor.new

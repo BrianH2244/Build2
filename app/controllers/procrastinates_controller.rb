@@ -16,7 +16,7 @@ class ProcrastinatesController < ApplicationController
       redirect_to overcomingprocrastination_path
     else
       @procrastinationfeed_items = []
-      render 'procrastinates/procrastinates'
+      render 'static_pages/overcomingprocrastination'
     end
   end
 
