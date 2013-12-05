@@ -28,6 +28,8 @@ Build::Application.routes.draw do
   resources :mostimportants, :only => [:create, :destroy]
   resources :procrastinates, :only => [:create, :destroy]
   resources :procrastinate1s, :only => [:create, :destroy]
+  resources :procrastinate2s, :only => [:create, :destroy]
+  resources :procrastinate3s, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 

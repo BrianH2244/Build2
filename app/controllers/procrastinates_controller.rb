@@ -2,13 +2,6 @@ class ProcrastinatesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :authorized_user, :only => :destroy
 
-  def procrastinates
-    if signed_in?
-      @procrastinate = Procrastinate.new
-      @procrastinationfeed_items = current_user.procrastinationfeed.paginate(:page => params[:page])
-    end
-  end
-
   def create
     @procrastinate = current_user.procrastinates.build(params[:procrastinate])
     if @procrastinate.save

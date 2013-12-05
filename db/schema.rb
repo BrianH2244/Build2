@@ -87,6 +87,24 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "procrastinate1s", ["user_id", "created_at"], :name => "index_procrastinate1s_on_user_id_and_created_at"
 
+  create_table "procrastinate2s", :force => true do |t|
+    t.string   "procrastination2"
+    t.integer  "user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "procrastinate2s", ["user_id", "created_at"], :name => "index_procrastinate2s_on_user_id_and_created_at"
+
+  create_table "procrastinate3s", :force => true do |t|
+    t.string   "procrastination3"
+    t.integer  "user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "procrastinate3s", ["user_id", "created_at"], :name => "index_procrastinate3s_on_user_id_and_created_at"
+
   create_table "procrastinates", :force => true do |t|
     t.string   "procrastination"
     t.integer  "user_id"

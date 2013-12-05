@@ -45,6 +45,10 @@ class StaticPagesController < ApplicationController
       @procrastinationfeed_items = current_user.procrastinationfeed.paginate(:page => params[:page])
       @procrastinate1 = Procrastinate1.new
       @procrastination1feed_items = current_user.procrastination1feed.paginate(:page => params[:page])
+      @procrastinate2 = Procrastinate2.new
+      @procrastination2feed_items = current_user.procrastination2feed.paginate(:page => params[:page])
+      @procrastinate3 = Procrastinate3.new
+      @procrastination3feed_items = current_user.procrastination3feed.paginate(:page => params[:page])
     end
   end
 
