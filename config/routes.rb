@@ -30,6 +30,7 @@ Build::Application.routes.draw do
   resources :procrastinate1s, :only => [:create, :destroy]
   resources :procrastinate2s, :only => [:create, :destroy]
   resources :procrastinate3s, :only => [:create, :destroy]
+  resources :gratefuls, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
@@ -43,6 +44,7 @@ Build::Application.routes.draw do
   match '/funs' => 'funs#funs', :via => :get
   match '/mostimportanttasks' => 'mostimportants#mostimportants', :via => :get
   match '/overcomingprocrastination' => 'static_pages#overcomingprocrastination', :via => :get
+  match '/gratitude' => 'gratefuls#gratefuls', :via => :get
 
   match '/savor_the_moment' => 'static_pages#savor', :via => :get
   match '/habits_are_a_choice' => 'static_pages#habits', :via => :get

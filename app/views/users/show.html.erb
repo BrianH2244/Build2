@@ -97,7 +97,6 @@
 </div>
 
 <div class="clear"></div>
-<br />
 
 <div class="left">
   <% unless @user.quotes.empty? %>
@@ -170,3 +169,15 @@
 <div class="clear"></div>
 
 <div class="clear"></div>
+
+<div class="left">
+  <% unless @user.gratefuls.empty? %>
+    <h3><%= link_to 'Expressions of Gratitude', gratitude_path %></h3>
+
+    <table>
+      <%= render @gratefuls %>
+    </table>
+
+    <%= will_paginate @gratefuls %>
+  <% end %>
+</div>

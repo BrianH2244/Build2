@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "funs", ["user_id", "created_at"], :name => "index_funs_on_user_id_and_created_at"
 
+  create_table "gratefuls", :force => true do |t|
+    t.string   "gratitude"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "gratefuls", ["user_id", "created_at"], :name => "index_gratefuls_on_user_id_and_created_at"
+
   create_table "habits", :force => true do |t|
     t.string   "habitual"
     t.integer  "user_id"

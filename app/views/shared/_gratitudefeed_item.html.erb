@@ -1,0 +1,10 @@
+<tr>
+  <td class="statement">
+    <h9><%= gratitudefeed_item.gratitude %></h9>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", gratitudefeed_item, :method => :delete,
+                                              :confirm => "You sure?",
+                                              :title => gratitudefeed_item.gratitude %>
+  </td>
+</tr>

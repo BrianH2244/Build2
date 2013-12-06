@@ -1,0 +1,7 @@
+<%= form_for (@grateful) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :gratitude, placeholder: "Compose expression of gratitude..." %>
+  </div>
+  <%= f.submit "Create Gratitude", class: "btn btn-large btn-primary" %>
+<% end %>

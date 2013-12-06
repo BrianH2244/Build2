@@ -1,0 +1,6 @@
+<% unless @gratitudefeed_items.empty? %>
+  <table class="feed" summary="Feed Statements">
+    <%= render :partial => 'shared/gratitudefeed_item', :collection => @gratitudefeed_items %>
+  </table>
+  <%= will_paginate @gratitudefeed_items %>
+<% end %>
