@@ -7,6 +7,7 @@
     </section>
   </aside>
 
+
 <div class="projects">
   <% unless @user.projects.empty? %>
     <h3><%= link_to 'Current Projects', projects_path %></h3>
@@ -19,7 +20,7 @@
   <% end %>
 </div>
 
-<div class="mits">
+<div class="weekly">
   <% unless @user.weeks.empty? %>
     <h3><%= link_to 'Weekly MITs', weekly_path %></h3>
 
@@ -31,8 +32,19 @@
   <% end %>
 </div>
 
-<div class="clear"></div>
-<br />
+<div class="tasks">
+  <% unless @user.mostimportants.empty? %>
+    <h3><%= link_to 'Most Important Tasks', mostimportanttasks_path %></h3>
+
+    <table>
+      <%= render @mostimportants %>
+    </table>
+
+    <%= will_paginate @mostimportants %>
+  <% end %>
+</div>
+</div>
+
 
 <div class="box">
 <div class="shine">
@@ -99,20 +111,6 @@
 <div class="clear"></div>
 
 <div class="left">
-  <% unless @user.quotes.empty? %>
-    <h3><%= link_to 'Inspiring Quotations', quotes_path %></h3>
-
-    <table>
-      <%= render @quotes %>
-    </table>
-
-    <%= will_paginate @quotes %>
-  <% end %>
-</div>
-
-<div class="clear"></div>
-
-<div class="left">
   <% unless @user.funs.empty? %>
     <h3><%= link_to 'Fun Activities', funs_path %></h3>
 
@@ -121,21 +119,6 @@
     </table>
 
     <%= will_paginate @funs %>
-  <% end %>
-</div>
-
-<div class="clear"></div>
-<br />
-
-<div class="left">
-  <% unless @user.mostimportants.empty? %>
-    <h3><%= link_to 'Most Important Tasks', mostimportanttasks_path %></h3>
-
-    <table>
-      <%= render @mostimportants %>
-    </table>
-
-    <%= will_paginate @mostimportants %>
   <% end %>
 </div>
 
@@ -168,7 +151,7 @@
 
 <div class="clear"></div>
 
-<div class="clear"></div>
+<br />
 
 <div class="left">
   <% unless @user.gratefuls.empty? %>
@@ -179,5 +162,21 @@
     </table>
 
     <%= will_paginate @gratefuls %>
+  <% end %>
+</div>
+
+<div class="clear"></div>
+
+<br />
+
+<div class="left">
+  <% unless @user.quotes.empty? %>
+    <h3><%= link_to 'Inspiring Quotations', quotes_path %></h3>
+
+    <table>
+      <%= render @quotes %>
+    </table>
+
+    <%= will_paginate @quotes %>
   <% end %>
 </div>
