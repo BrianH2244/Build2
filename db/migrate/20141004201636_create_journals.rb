@@ -6,6 +6,6 @@ class CreateJournals < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :journals, [:user_id, :created_at]
+    add_index :journals, :limit => 1000 [:user_id, :created_at]
   end
 end
