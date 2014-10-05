@@ -1,7 +1,7 @@
 class CreateJournals < ActiveRecord::Migration
   def change
     create_table :journals do |t|
-      t.string :event
+      t.text :event
       t.integer :user_id
 
       t.timestamps
