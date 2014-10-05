@@ -18,6 +18,8 @@ Build::Application.routes.draw do
   resources :users
   resources :projects, :only => [:create, :destroy]
   resources :weeks, :only => [:create, :destroy]
+  resources :mostimportants, :only => [:create, :destroy]
+  resources :journals, :only => [:create, :destroy]
   resources :quotes, :only => [:create, :destroy]
   resources :savors, :only => [:create, :destroy]
   resources :habits, :only => [:create, :destroy]
@@ -25,7 +27,6 @@ Build::Application.routes.draw do
   resources :needs, :only => [:create, :destroy]
   resources :funs, :only => [:create, :destroy]
   resources :expansions, :only => [:create, :destroy]
-  resources :mostimportants, :only => [:create, :destroy]
   resources :procrastinates, :only => [:create, :destroy]
   resources :procrastinate1s, :only => [:create, :destroy]
   resources :procrastinate2s, :only => [:create, :destroy]
@@ -38,11 +39,12 @@ Build::Application.routes.draw do
 
   match '/projects' => 'projects#projects', :via => :get
   match '/weekly' => 'weeks#weekly', :via => :get
+  match '/mostimportanttasks' => 'mostimportants#mostimportants', :via => :get
+  match '/journals' => 'journals#journals', :via => :get
   match '/quotes' => 'quotes#quotes', :via => :get
   match '/reflect' => 'static_pages#reflect', :via => :get
   match '/agent' => 'static_pages#agent', :via => :get
   match '/funs' => 'funs#funs', :via => :get
-  match '/mostimportanttasks' => 'mostimportants#mostimportants', :via => :get
   match '/overcomingprocrastination' => 'static_pages#overcomingprocrastination', :via => :get
   match '/gratitude' => 'gratefuls#gratefuls', :via => :get
 

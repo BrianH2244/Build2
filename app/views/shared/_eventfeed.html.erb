@@ -1,0 +1,6 @@
+<% unless @eventfeed_items.empty? %>
+  <table class="feed" summary="Feed Statements">
+    <%= render :partial => 'shared/eventfeed_item', :collection => @eventfeed_items %>
+  </table>
+  <%= will_paginate @eventfeed_items %>
+<% end %>

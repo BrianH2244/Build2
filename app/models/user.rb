@@ -17,9 +17,10 @@ class User < ActiveRecord::Base
   has_many :expansions
   has_many :projects
   has_many :weeks
+  has_many :mostimportants
+  has_many :journals
   has_many :quotes
   has_many :funs
-  has_many :mostimportants
   has_many :procrastinates
   has_many :procrastinate1s
   has_many :procrastinate2s
@@ -68,6 +69,16 @@ class User < ActiveRecord::Base
     Week.where("user_id = ?", id)
   end
 
+  def mostimportantlyfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Mostimportant.where("user_id = ?", id)
+  end
+
+  def eventfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Journal.where("user_id = ?", id)
+  end
+
   def quotationfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Quote.where("user_id = ?", id)
@@ -76,11 +87,6 @@ class User < ActiveRecord::Base
   def funnestfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Fun.where("user_id = ?", id)
-  end
-
-  def mostimportantlyfeed
-    # This is preliminary. See Chapter 12 for the full implementation.
-    Mostimportant.where("user_id = ?", id)
   end
 
   def procrastinationfeed

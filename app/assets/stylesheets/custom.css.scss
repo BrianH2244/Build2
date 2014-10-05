@@ -298,6 +298,10 @@ input {
   height: auto !important;
 }
 
+textarea {
+  height: 100px;
+}
+
 #error_explanation {
   color:#f00;
   ul {

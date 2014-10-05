@@ -36,11 +36,12 @@
     <div class="centered-tabs">
       <ul class="nav nav-tabs">
       <% if signed_in? %>
-        <li class="active"><%= link_to 'Reflect', reflect_path %></li>
+        <li class="active"><%#= link_to 'Reflect', reflect_path %></li>
         <li class="active"><%= link_to 'Projects', projects_path %></li>
         <li class="active"><%= link_to 'Weekly', weekly_path %></li>
         <li class="active"><%= link_to 'Tasks', mostimportanttasks_path %></li>
-        <li class="active"><%= link_to 'Motivated', overcomingprocrastination_path %></li>
+        <li class="active"><%= link_to 'Journal', journals_path %></li>
+        <li class="active"><%#= link_to 'Motivated', overcomingprocrastination_path %></li>
         <li class="active"><%= link_to 'Grateful', gratitude_path %></li>
         <li class="active"><%= link_to 'Quotes', quotes_path %></li>
         <li class="active"><%#= link_to 'Fun', funs_path %></li>

@@ -1,0 +1,15 @@
+<% provide(:title, 'Daily Journal - Track and Reflect') %>
+<h1>Daily Journal</h1>
+
+<p>Reflect and write down the achievements and constructive criticism about the day's events.</p>
+
+<table>
+  <tr>
+    <td>
+      <h3>What did you learn today?</h3>
+      <p>Important distinctions of habits or behaviours you are trying to change.</p>
+      <%= render 'shared/journal_form' %>
+      <%= render 'shared/eventfeed' %>
+    </td>
+  </tr>
+</table>
