@@ -3,7 +3,7 @@ class Mostimportant < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :mostimportantly, :presence => true, :length => { :maximum => 100 }
+  validates :mostimportantly, :presence => true, :length => { :maximum => 300 }
   validates :user_id, :presence => true
 
   default_scope :order => 'mostimportants.created_at DESC'
