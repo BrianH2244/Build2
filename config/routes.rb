@@ -58,7 +58,6 @@ Build::Application.routes.draw do
   match '/donate' => 'static_pages#donate', :via => :get
 
   match '/help' => 'static_pages#help', :via => :get
-  match '/about' => 'static_pages#about', :via => :get
   match '/contact' => 'static_pages#contact', :via => :get
 
   # The priority is based upon order of creation:
