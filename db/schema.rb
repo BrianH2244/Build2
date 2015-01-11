@@ -133,7 +133,7 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
   add_index "procrastinates", ["user_id", "created_at"], :name => "index_procrastinates_on_user_id_and_created_at"
 
   create_table "projects", :force => true do |t|
-    t.string   "goal"
+    t.text     "goal"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -188,7 +188,7 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
   add_index "users", ["unlock_token"], :name => "index_users_on_unlock_token", :unique => true
 
   create_table "weeks", :force => true do |t|
-    t.string   "mit"
+    t.text     "mit"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

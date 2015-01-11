@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :goal, :presence => true, :length => { :maximum => 100 }
+  validates :goal, presence: true, length: { maximum: 1000 }
   validates :user_id, :presence => true
 
   default_scope :order => 'projects.created_at DESC'
