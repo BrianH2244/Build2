@@ -40,6 +40,10 @@ textarea {
   }
 }
 
+.clear {
+    clear: both;
+} 
+
 .homemarginleft {
   text-align: left;
   margin-left: 100px;
@@ -116,7 +120,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: grey;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;

@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
   has_many :procrastinate2s
   has_many :procrastinate3s
   has_many :gratefuls
+  has_many :questions
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -112,5 +113,10 @@ class User < ActiveRecord::Base
   def gratitudefeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Grateful.where("user_id = ?", id)
+  end
+
+  def whyfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Question.where("user_id = ?", id)
   end
 end

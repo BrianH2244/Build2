@@ -141,6 +141,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "projects", ["user_id", "created_at"], :name => "index_projects_on_user_id_and_created_at"
 
+  create_table "questions", :force => true do |t|
+    t.string   "why"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "questions", ["user_id", "created_at"], :name => "index_questions_on_user_id_and_created_at"
+
   create_table "quotes", :force => true do |t|
     t.string   "quotation"
     t.integer  "user_id"

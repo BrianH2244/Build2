@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     @procrastinate2s = @user.procrastinate2s.paginate(:page => params[:page])
     @procrastinate3s = @user.procrastinate3s.paginate(:page => params[:page])
     @gratefuls = @user.gratefuls.paginate(:page => params[:page])
+    @questions = @user.questions.paginate(:page => params[:page])
     if request.path != user_path(@user)
       redirect_to @user, status: :moved_permanently
     end

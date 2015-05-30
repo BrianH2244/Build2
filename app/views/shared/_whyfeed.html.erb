@@ -1,0 +1,6 @@
+<% unless @whyfeed_items.empty? %>
+  <table class="feed" summary="Feed Statements">
+    <%= render :partial => 'shared/whyfeed_item', :collection => @whyfeed_items %>
+  </table>
+  <%= will_paginate @whyfeed_items %>
+<% end %>
