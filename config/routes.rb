@@ -59,6 +59,7 @@ Build::Application.routes.draw do
   match '/goal_setting' => 'static_pages#goals', :via => :get
   match '/donate' => 'static_pages#donate', :via => :get
 
+  match '/about' => 'static_pages#about', :via => :get
   match '/help' => 'static_pages#help', :via => :get
   match '/contact' => 'static_pages#contact', :via => :get
 
