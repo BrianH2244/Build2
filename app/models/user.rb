@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   has_many :procrastinate3s
   has_many :gratefuls
   has_many :questions
+  has_many :principles
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -118,5 +119,10 @@ class User < ActiveRecord::Base
   def whyfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Question.where("user_id = ?", id)
+  end
+
+  def valuefeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Principle.where("user_id = ?", id)
   end
 end

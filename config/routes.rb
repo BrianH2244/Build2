@@ -33,6 +33,7 @@ Build::Application.routes.draw do
   resources :procrastinate3s, :only => [:create, :destroy]
   resources :gratefuls, :only => [:create, :destroy]
   resources :questions, :only => [:create, :destroy]
+  resources :principles, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
@@ -55,7 +56,7 @@ Build::Application.routes.draw do
   match '/self_improvement' => 'static_pages#improvement', :via => :get
   match '/essential_needs' => 'static_pages#needs', :via => :get
   match '/expanding_awareness' => 'static_pages#expand', :via => :get
-  match '/shine_from_within' => 'static_pages#shine', :via => :get
+  match '/shine' => 'static_pages#shine', :via => :get
   match '/goal_setting' => 'static_pages#goals', :via => :get
   match '/donate' => 'static_pages#donate', :via => :get
 

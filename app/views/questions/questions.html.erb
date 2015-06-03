@@ -1,29 +1,41 @@
 <% provide(:title, 'Questions of Interest') %>
-<h1>Questions of Interest</h1>
+<h1>Questions that Drive<br>Purpose Action and Results</h1>
 
-<p>Authenticity means your Golden Circle is in balance.</p>
+<h2>Authenticity means your Golden Circle is in balance.<br>The results of your principle actions, based on your beliefs.</h2>
 
-<p>WHY is the inspiration behind belief. A vision statement of intent.</p>
-<p>HOWs are the actions we take to realize that belief. A mission statement of values or guiding principles that bring causes to life.</p>
-<p>WHATs are the results of those actions. Everything you say or do to prove what you believe.</p>
-
-<p>People don't buy what you do. They buy why you do it.</p>
+<div class="right">
+<h1>Golden Circle</h1>
+<%= image_tag "golden-circle.jpg", :size => "300x300", :alt => "Golden Circle" %>
+</div>
 
 <table>
   <tr>
     <td>
-      <h3>Why do you do what you do?</h3>
-      <p>Why is a purpose, cause or belief.</p>
+      <h3>WHYs are the inspiration behind purpose, cause, and belief.</h3>
+      <p>A vision statement of intent for why do you do what you do.</p>
       <%= render 'shared/why_form' %>
       <%= render 'shared/whyfeed' %>
     </td>
   </tr>
 </table>
 
-<p>HOWs are your values or principles that guide HOW to bring your cause to life.</p>
+<table>
+  <tr>
+    <td>
+      <h3>HOWs are the actions we take to realize a belief.</h3>
+      <p>Values or principles that bring a cause to life; with clarity, discipline and consistency.</p>
+      <%= render 'shared/value_form' %>
+      <%= render 'shared/valuefeed' %>
+    </td>
+  </tr>
+</table>
 
-<p>WHATs are the results of those actions - everything you say and do has to prove what you believe (your products, services, marketing, PR, culture and whom you hire).</p>
+<table>
+  <tr>
+    <td>
+      <h3>WHATs are the results of your principle actions.</h3>
+      <p>Everything you say and do has to prove what you believe.</p>
+    </td>
+  </tr>
+</table>
 
-<p>The only way people will know what you believe is by the things you say and do, and if you're not consistent in the things you say and do, no one will know what you believe.</p>
-
-<p>It is at the WHAT level that authenticity happens.</p>

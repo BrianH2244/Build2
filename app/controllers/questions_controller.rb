@@ -6,6 +6,8 @@ class QuestionsController < ApplicationController
     if signed_in?
       @question = Question.new
       @whyfeed_items = current_user.whyfeed.paginate(:page => params[:page])
+      @principle = Principle.new
+      @valuefeed_items = current_user.valuefeed.paginate(:page => params[:page])
     end
   end
 

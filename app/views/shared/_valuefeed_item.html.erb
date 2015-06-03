@@ -1,0 +1,13 @@
+<tr>
+  <td class="statement">
+    <span><%= valuefeed_item.value %></span>
+  </td>
+  <td class="days">
+    <span><%= time_ago_in_words(valuefeed_item.created_at) %> ago.</span>
+  </td>
+  <td class="erase">
+    <%= link_to "delete", valuefeed_item, :method => :delete,
+                                          :confirm => "You sure?",
+                                          :title => valuefeed_item.value %>
+  </td>
+</tr>
