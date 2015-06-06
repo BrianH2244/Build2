@@ -35,6 +35,7 @@ Build::Application.routes.draw do
   resources :questions, :only => [:create, :destroy]
   resources :principles, :only => [:create, :destroy]
   resources :results, :only => [:create, :destroy]
+  resources :books, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 
@@ -51,6 +52,7 @@ Build::Application.routes.draw do
   match '/overcomingprocrastination' => 'static_pages#overcomingprocrastination', :via => :get
   match '/gratitude' => 'gratefuls#gratefuls', :via => :get
   match '/questions' => 'questions#questions', :via => :get
+  match '/books' => 'books#books', :via => :get
 
   match '/savor_the_moment' => 'static_pages#savor', :via => :get
   match '/habits_are_a_choice' => 'static_pages#habits', :via => :get
