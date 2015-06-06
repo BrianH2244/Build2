@@ -34,6 +34,7 @@ Build::Application.routes.draw do
   resources :gratefuls, :only => [:create, :destroy]
   resources :questions, :only => [:create, :destroy]
   resources :principles, :only => [:create, :destroy]
+  resources :results, :only => [:create, :destroy]
 
   root to: 'static_pages#home'
 

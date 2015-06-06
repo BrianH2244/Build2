@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
   has_many :gratefuls
   has_many :questions
   has_many :principles
+  has_many :results
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -124,5 +125,10 @@ class User < ActiveRecord::Base
   def valuefeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Principle.where("user_id = ?", id)
+  end
+
+  def whatfeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Result.where("user_id = ?", id)
   end
 end

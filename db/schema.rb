@@ -168,6 +168,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "quotes", ["user_id", "created_at"], :name => "index_quotes_on_user_id_and_created_at"
 
+  create_table "results", :force => true do |t|
+    t.string   "what"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "results", ["user_id", "created_at"], :name => "index_results_on_user_id_and_created_at"
+
   create_table "savors", :force => true do |t|
     t.string   "savoring"
     t.integer  "user_id"

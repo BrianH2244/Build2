@@ -1,0 +1,7 @@
+<%= form_for (@result) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :what, placeholder: "Compose result..." %>
+  </div>
+  <%= f.submit "Create Result", class: "btn btn-large btn-primary" %>
+<% end %>

@@ -8,6 +8,8 @@ class QuestionsController < ApplicationController
       @whyfeed_items = current_user.whyfeed.paginate(:page => params[:page])
       @principle = Principle.new
       @valuefeed_items = current_user.valuefeed.paginate(:page => params[:page])
+      @result = Result.new
+      @whatfeed_items = current_user.whatfeed.paginate(:page => params[:page])
     end
   end
 
