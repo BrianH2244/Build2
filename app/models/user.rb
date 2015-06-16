@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
   has_many :principles
   has_many :results
   has_many :books
+  has_many :environments
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -136,5 +137,10 @@ class User < ActiveRecord::Base
   def readfeed
     # This is preliminary. See Chapter 12 for the full implementation.
     Book.where("user_id = ?", id)
+  end
+
+  def changefeed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Environment.where("user_id = ?", id)
   end
 end
