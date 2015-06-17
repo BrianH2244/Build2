@@ -1,7 +1,7 @@
 <%= form_for (@journal) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :event, placeholder: "Compose new journal entry..." %>
+    <%= f.text_field :event, placeholder: "Compose new tracked entry..." %>
   </div>
   <%= f.submit "Create Entry", class: "btn btn-large btn-primary" %>
 <% end %>

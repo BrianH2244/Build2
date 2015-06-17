@@ -54,7 +54,7 @@ Build::Application.routes.draw do
   match '/gratitude' => 'gratefuls#gratefuls', :via => :get
   match '/questions' => 'questions#questions', :via => :get
   match '/books' => 'books#books', :via => :get
-  match '/environment' => 'environments#environments', :via => :get
+  match '/environments' => 'environments#environments', :via => :get
 
   match '/savor_the_moment' => 'static_pages#savor', :via => :get
   match '/habits_are_a_choice' => 'static_pages#habits', :via => :get

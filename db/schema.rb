@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
 
   add_index "books", ["user_id", "created_at"], :name => "index_books_on_user_id_and_created_at"
 
+  create_table "environments", :force => true do |t|
+    t.string   "change"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "environments", ["user_id", "created_at"], :name => "index_environments_on_user_id_and_created_at"
+
   create_table "expansions", :force => true do |t|
     t.string   "expanding"
     t.integer  "user_id"
