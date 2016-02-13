@@ -8,8 +8,8 @@ end
 def make_users
   admin = User.create!(name:     "Brian Hildebrandt",
                        email:    "brian_hildebrandt@hotmail.com",
-                       password: "MadTuf921",
-                       password_confirmation: "MadTuf921")
+                       password: "FakePassword123",
+                       password_confirmation: "FakePassword123")
   admin.toggle!(:admin)
   99.times do |n|
     name  = Faker::Name.name
