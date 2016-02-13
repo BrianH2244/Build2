@@ -242,3 +242,4 @@ ActiveRecord::Schema.define(:version => 2012041712524413) do
   add_index "weeks", ["user_id", "created_at"], :name => "index_weeks_on_user_id_and_created_at"
 
 end
+
